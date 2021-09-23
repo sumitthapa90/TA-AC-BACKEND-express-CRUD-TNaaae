@@ -23,6 +23,7 @@ app.use((req, res, next) => {
   res.send("Page not found");
 });
 
+// server listin
 app.listen(5000, () => {
   console.log("Server at port 5000");
 });
