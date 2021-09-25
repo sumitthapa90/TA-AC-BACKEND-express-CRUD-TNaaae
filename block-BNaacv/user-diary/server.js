@@ -4,13 +4,13 @@ var userRoute = require("./routes/user");
 
 var app = express();
 
-//middlewere
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
-
 //start engine
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
+
+//middlewere
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
 
 //general routes
 app.get("/", (req, res) => {
