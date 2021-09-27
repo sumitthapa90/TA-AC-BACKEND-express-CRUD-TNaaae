@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="bookpage">
+      <a href="/">BOOKS STORE</a>
+      <nav class="nav">
+        <a href="/books/new">ADD BOOKS</a>
+      </nav>
+    </header>
+    <div>
+      <h2>listen</h2>
+      <%= books.forEach(book => { %>
+      <section class="box">
+        <div class="content">
+          <h3><%= book.title %></h3>
+          <p><%= book.description %></p>
+        </div>
+      </section>
+      <%}) %>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+body {
+  background-color: orange;
+}
+a {
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 1rem;
+  border-radius: 10px;
+}
+.container {
+  text-align: center;
+}
+.list {
+  background-color: orange;
+}
+.formclass {
+  background-color: orange;
+}
