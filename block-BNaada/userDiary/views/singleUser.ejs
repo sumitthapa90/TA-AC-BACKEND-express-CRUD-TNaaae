@@ -4,12 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <h2>Single User Info</h2>
-    <h2><%= user.name%></h2>
-    <p><%= user.usename%</p>
-    <h3><%= user.email%</h3>
-    <p><%= user.age%</p>
+    <h3>single user</h3>
+    <%= user.forEach(user => { %>
+    <a href="/users/<%= user.id %>">
+      <h2><%= user.name %></h2>
+      <p><%= user.username %></p>
+      <h3><%= user.email %></h3>
+      <p><%= user.age %></p>
+    </a>
+    <% }) %>
   </body>
 </html>
