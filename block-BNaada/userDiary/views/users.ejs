@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>
+      <a href="/">bookstrore</a>
+      <h3>listen user</h3>
+      <a href="/users/new">Add user</a>
+      <div>
+        <%= users.forEach(user => { %>
+        <h2><%= user.name%></h2>
+        <p><%= user.usename%</p>
+        <h3><%= user.email%</h3>
+        <p><%= user.age%</p>
+        <% }) %>
+      </div>
+    </h2>
+  </body>
+</html>
