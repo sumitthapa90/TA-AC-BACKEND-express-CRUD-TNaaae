@@ -33,6 +33,6 @@ app.use((err, req, res, next) => {
   res.send(err);
 });
 //server
-app.listen(3002, () => {
-  console.log("Server listen at port 3002");
+app.listen(3004, () => {
+  console.log("Server listen at port 3004");
 });
