@@ -1,7 +1,6 @@
 var express = require("express");
-var User = require("../model/user");
-
 var router = express.Router();
+var User = require("../model/user");
 
 router.get("/", (req, res, next) => {
   User.find({}, (err, users) => {
@@ -15,8 +14,8 @@ router.get("/new", (req, res) => {
 });
 
 router.post("/", (req, res, next) => {
-  console.log(req.body);
-  Book.Create(req.body, (err, userRoute) => {
+  User.create(req.body, (err, userRoute) => {
+    console.log(req.body);
     if (err) return next(err);
     res.redirect("/users");
   });
@@ -26,9 +25,8 @@ router.get("/:id", (req, res, next) => {
   var id = req.params.id;
   User.findById(id, (err, user) => {
     if (err) return next(err);
-    res.render("singleUser", { user: user });
+    res.render("singleUser", { user });
   });
 });
 
 module.exports = router;
-
