@@ -130,6 +130,10 @@ table {
 
 /* css */
 
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
 .userInfo {
   text-align: center;
   margin-top: 2rem;
@@ -141,4 +145,8 @@ h1 {
 a {
   text-decoration: none;
   font-size: 1.3rem;
+}
+.list {
+  width: 900px;
+  background-color: gray;
 }
