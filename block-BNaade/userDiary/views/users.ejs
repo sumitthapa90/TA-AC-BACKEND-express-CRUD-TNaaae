@@ -7,9 +7,22 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <a href="/">USER INFO</a>
-    <h3>list</h3>
-    <a href="/users/new">Add USER</a>
-    <a href="/">Back</a>
+    <div class="flex">
+      <a href="/">USER INFO</a>
+
+      <a href="/users/new">Add USER</a>
+    </div>
+
+    <div class="list">
+      <h4>LIST OF USERS</h4>
+      <%= users.forEach(user => { %>
+      <section>
+        <h3><%= user.name %></h3>
+        <p><%= user.username %></p>
+        <p><%= user.email %></p>
+        <p><%= user.age %></p>
+      </section>
+      <% }) %>
+    </div>
   </body>
 </html>
